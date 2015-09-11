@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Corpus Widgets</title>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/widgets.css -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="demo">This is our demo.</div>
+    <hr/>
+    <h3>corpus-discussions</h3>
+    <corpus-discussions locale="fr" user="useruseruseruseruseruser"></corpus-discussions>
+    <hr/>
+
+    <h3>corpus-discussion</h3>
+    <corpus-discussion slug="faceted-law-discussion:facet1"></corpus-discussion>
+    <hr/>
+
+    <h3>recent-comments</h3>
+    <corpus-recent-comments slug="faceted-law-discussion:facet1"></corpus-recent-comments>
+    <hr/>
+
+    <h3>corpus-articles</h3>
+    <corpus-articles slug="constitucion-de-chile:default" sort="top-voted"></corpus-articles>
+    <hr/>
+
+    <h3>corpus-articles</h3>
+    <corpus-articles slug="constitucion-de-chile:default" sort="top-commented"></corpus-articles>
+    <hr/>
+
+    <h3>corpus-articles</h3>
+    <corpus-articles slug="constitucion-de-chile:default" sort="votesDown DESC"></corpus-articles>
+    <hr/>
+
+    <!-- build:js widgets.min.js -->
+    <!-- uninjectable -->
+    <script src="/bower_components/lodash/lodash.min.js"></script>
+    <script src="/scripts/templates.js"></script>
+    <script src="/scripts/config.js"></script>
+    <!-- enduninjectable -->
+    <!-- inject:js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/widgets/articles.js"></script>
+    <script src="scripts/widgets/comments.js"></script>
+    <script src="scripts/widgets/discussion.js"></script>
+    <script src="scripts/widgets/discussions.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+</html>

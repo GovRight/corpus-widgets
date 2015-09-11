@@ -1,0 +1,7 @@
+{
+  "SiteConfig": {
+    "environment": "production",
+    "defaultLocale": "en",
+    "corpusUrl": "http://corpus.govright.org/api"
+  }
+}

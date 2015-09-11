@@ -1,0 +1,84 @@
+<div class="corpus-discussion">
+  <a href="http://legislationlab.org/{{= locale}}/law/{{= discussion.lawSlug}}:{{= discussion.slug}}/" target="_blank">
+    <h3 class="corpus-discussion-h3">{{= discussion.title }}</h3></a>
+
+  <div class="corpus-discussion-summary">{{= GovRight.truncateString(discussion.overview)}}</div>
+
+  <div class="corpus-discussion-stats">
+    <div class="corpus-discussion-stats-item">
+      <b>{{= discussion.stats.votesUp }}</b>
+      <br/>votes up
+    </div>
+    <div class="corpus-discussion-stats-item">
+      <b>{{= discussion.stats.votesDown}}</b>
+      <br/>votes down
+    </div>
+    <div class="corpus-discussion-stats-item">
+      <b>{{= discussion.stats.comments }}</b>
+      <br/>comments
+    </div>
+    <div class="corpus-discussion-stats-item">
+      <b>{{= discussion.stats.versions }}</b>
+      <br/>versions
+    </div>
+    <div class="corpus-discussion-stats-item">
+      <b>{{= discussion.stats.comparisons }}</b>
+      <br/>comparisons
+    </div>
+  </div>
+</div>
+
+<style>
+  .corpus-discussion {
+    border: 1px solid black;
+    max-width: 500px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  .corpus-discussion-h3 {
+    background-color: #19191A;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .corpus-discussion-summary {
+    font-style: italic;
+    padding: 10px;
+    text-align: justify;
+  }
+
+  .corpus-discussion-stats {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    text-align: center;
+  }
+
+  .corpus-discussion-stats-item {
+    width: 20%;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .corpus-discussion-stats-item:last-child {
+    border-right: 0;
+  }
+
+  .corpus-discussion a {
+    text-decoration: none;
+  }
+
+  .corpus-discussion a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+  }
+
+  .corpus-discussion h3 {
+    margin: 0;
+  }
+</style>

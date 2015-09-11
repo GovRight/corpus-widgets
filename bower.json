@@ -1,0 +1,15 @@
+{
+  "name": "corpus-widgets",
+  "version": "0.2.0",
+  "description": "A set of widgets for extracting and embedding Corpus data.",
+  "authors": [
+    "Heath Morrison <heath@govright.org>",
+    "Victor Miletsky <victor@govright.org>"
+  ],
+  "license": "Commercial",
+  "homepage": "http://govright.org",
+  "private": true,
+  "dependencies": {
+    "lodash": "~3.8.0"
+  }
+}

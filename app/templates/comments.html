@@ -1,0 +1,98 @@
+<div class="corpus-recent-comments">
+  <h4 class="corpus-recent-comments-h4">Recent comments on: </h4>
+  <a href="http://legislationlab.org/{{= locale}}/law/{{= discussion.lawSlug}}:{{= discussion.slug}}/" target="_blank">
+    <h3 class="corpus-recent-comments-h3">{{= discussion.title }}</h3></a>
+
+  <div class="corpus-recent-comments-items">
+    {{ _.each(comments, function(comment){ }}
+    <div class="corpus-recent-comments-item">
+      <div class="corpus-recent-comments-author">
+        <a href="http://facebook.com/app_scoped_user_id/{{= comment.user.profile.id}}" target="_blank">
+          {{= comment.user.profile.displayName}}</a>
+      </div>
+      <div class="corpus-recent-comments-date">
+        {{= GovRight.formatDate(comment.created, 'yyyy-MM-dd HH:mm')}}
+      </div>
+      <div class="corpus-recent-comments-text">
+        <a href="http://legislationlab.org/{{= locale}}/law/{{= discussion.lawSlug}}:{{= discussion.slug}}/v/{{= comment.versionId}}" target="_blank">
+          {{= GovRight.truncateString(comment.text)}}</a>
+      </div>
+    </div>
+    {{ }); }}
+  </div>
+</div>
+
+<style>
+  .corpus-recent-comments {
+    max-width: 500px;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+
+  .corpus-recent-comments-h3 {
+    background-color: #19191A;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .corpus-recent-comments-h4 {
+    background-color: #19191A;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 10px 10px 0px 10px;
+  }
+
+  .corpus-recent-comments-item {
+    -moz-box-shadow: 1px 1px 1px #B2B2B2;
+    -webkit-box-shadow: 1px 1px 1px #B2B2B2;
+    box-shadow: 1px 1px 1px #B2B2B2;
+    padding: 10px;
+  }
+
+  .corpus-recent-comments-text {
+    text-align: justify;
+    padding-top: 10px;
+  }
+
+  .corpus-recent-comments-date {
+    text-align: right;
+    font-style: italic;
+  }
+
+  .corpus-recent-comments-items {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .corpus-recent-comments a {
+    text-decoration: none;
+    border-bottom:0;
+  }
+
+  .corpus-recent-comments a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+  }
+
+  .corpus-recent-comments h3,
+  .corpus-recent-comments h4 {
+    margin: 0;
+  }
+
+  .corpus-recent-comments-author {
+    float: left;
+    font-weight: 700;
+  }
+
+  .corpus-recent-comments-author a,
+  .corpus-recent-comments-text a {
+    color: #000000;
+  }
+
+  .corpus-recent-comments-author a:hover,
+  .corpus-recent-comments-text a:hover {
+    color: #25429A;
+  }
+
+</style>

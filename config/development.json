@@ -1,0 +1,7 @@
+{
+  "SiteConfig": {
+    "environment": "development",
+    "defaultLocale": "en",
+    "corpusUrl": "http://localhost:3000/api"
+  }
+}
